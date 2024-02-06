@@ -28,7 +28,7 @@ if (playGame) {
     const guess = parseInt(userInput.value);
 
     // Checking if the guess is valid
-    if (guess === 0 || guess < 0 || guess > 10 || isNaN(guess)) {
+    if (guess === 0 || guess < 0 || guess > 100 || isNaN(guess)) {
       alert(`Please enter a valid number`);
     } else {
       // Checking the guess and displaying the result
@@ -47,7 +47,7 @@ function checkGuess(guess) {
     // Ending and starting a new game
     endGame();
     newGame();
-  } else if (numGuess === 3) {
+  } else if (numGuess === 10) {
     // Displaying a message for reaching the maximum number of guesses
     lowOrHi.innerHTML = `Game Over! The random number was ${randomNumber}. <b>Play again</b>`;
 
@@ -75,7 +75,7 @@ function displayGuess(guess) {
   numGuess++;
 
   // Displaying the remaining guesses
-  remaining.innerHTML = 4 - numGuess;
+  remaining.innerHTML = 11 - numGuess;
 }
 
 // Function to end the game
